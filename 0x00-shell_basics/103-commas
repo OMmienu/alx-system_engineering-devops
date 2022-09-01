@@ -1,0 +1,2 @@
+#!/bin/bash
+Is -map | sort -d
