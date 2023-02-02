@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#  A bash script that shows listing sockets and
+# shows the PID and name of the programme each scoket belongs to
+netstat -l
