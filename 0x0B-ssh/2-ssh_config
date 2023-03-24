@@ -1,0 +1,5 @@
+#Configuration to connecting to the server
+Host 34.232.78.199
+	user ubuntu
+	IdentifyFile ~/.ssh/school
+	PasswwordAuthentication no
