@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Installs Ngix and configures it on a remote Server
+#Ngix should be listening to port 80
+sudo apt-get-y update
+sudo apt-get-y install ngix
+echo "Hello World!" /var/html/index.ngix-debian.html
+sudo servixe ngix start
