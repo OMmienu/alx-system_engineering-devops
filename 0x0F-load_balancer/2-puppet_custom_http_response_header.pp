@@ -17,13 +17,13 @@ package { 'nginx':
 file_line { 'add HTTP header':
   ensure => 'present',
   path   => '/etc/nginx/sites-available/default',
-  after  => 'listen 80 default_server:',
+  after  => 'listen 80 default_serve;',
   line   => 'add_header X-Served by $hostname:'
 }
 ->
 # start service
 service { 'nginx':
   ensure  => 'running',
-  enable  => 'true,
+  enable  => true,
   require => Package['nginx']
 }
