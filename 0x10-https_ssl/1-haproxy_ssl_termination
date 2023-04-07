@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+#Create a certificate using certbot and configure HAproxy to accept encrypted traffic for your subdomain www.
+
 global
 	log /dev/log  local0
 	stats  socket /run/haproxy/admin.sock mode 660 admi level
