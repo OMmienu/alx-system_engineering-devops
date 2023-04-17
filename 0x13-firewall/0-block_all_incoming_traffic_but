@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# installs ufw firewall and allows only the following port
+# port 22
+# port 433
+# port 80
+sudo ufw status
+sudo ufw allow 433
+sudo ufw allow 22
+sudo ufw allow 80
+sudo ufw enable
