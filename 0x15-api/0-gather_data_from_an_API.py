@@ -1,13 +1,10 @@
 #!/usr/bin/python3
+"""Write a Python script that, using this REST API, for a given employee ID, returns information about his/her TODO list progress."""
 
-"""Write a Python script that, using this REST API, for a given employee ID,
-returns information about his/her TODO list progress
-"""
+import requests
+from sys import argv
 
-    import requests
-    from sys import argv
-
-    if __name__ == "__main__":
+if __name__ == "__main__":
     user_id = argv[1]
     user_url = "https://jsonplaceholder.typicode.com/users/" + user_id
     user_dict = requests.get(user_url).json()
@@ -26,6 +23,5 @@ returns information about his/her TODO list progress
                 completed_titles.append(item.get("title"))
     print("Employee {} is done with tasks({}/{}):".format(
         user_name, number_completed, total_todo))
-   
     for title in completed_titles:
         print("\t {}".format(title))
