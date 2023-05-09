@@ -16,7 +16,7 @@ def recurse(subreddit, hot_list=[], after=None):
         after = posts['after']
         posts = posts['children']
         for post in posts:
-            hot_lists.append(post['data']['title'])
+            hot_list.append(post['data']['title'])
         if after is None:
             recurse(subreddit, hot_list, after)
         return (hot_list)
