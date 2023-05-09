@@ -6,7 +6,7 @@ import requests
 
 
 def count_words(subreddit, word_list, after="", count=[]):
-    """cound words of a REDDIT API"""
+    """count words of a REDDIT API"""
 
     if after == "":
         count = [0] * len(word_list)
