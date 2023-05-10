@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""A Script the REDDIT API"""
+"""A Fuction that queries the REDDIT API"""
 
 import json
 import requests
 
 
 def count_words(subreddit, word_list, after="", count=[]):
-    """count words of a REDDIT API"""
+    """count all words"""
 
     if after == "":
         count = [0] * len(word_list)
