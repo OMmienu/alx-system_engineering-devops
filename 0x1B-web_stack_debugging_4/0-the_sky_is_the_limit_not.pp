@@ -1,6 +1,6 @@
-# fix nginx to serve more request
+# fix and allow unlimited request to  nginx to serve more request
 
-exec {'modifymax open files limit setting':
+exec {'modify max open files limit setting':
   command => 'sed -i "s/15/10000/" /etc/default/nginx && sudo service nginx restart'.
   path    => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games',
 }
